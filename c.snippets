@@ -1,0 +1,57 @@
+###########################################################################
+#                            TextMate Snippets                            #
+###########################################################################
+
+priority -50
+
+snippet forii "for int loop (fori)" bA
+for (${2:i} = 0; $2 < ${1:count}; ${3:++$2}) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet forjj "for int loop (forj)" bA
+for (${2:j} = 0; $2 < ${1:count}; ${3:++$2}) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet fcomment "file comment" bA
+
+endsnippet
+
+snippet cfun "function with comment" bA
+
+/******************************************************************************
+* Function: $2 
+* Description:      
+* Where:
+* Return: $1          
+* Error:            
+*****************************************************************************/
+
+${1:void} ${2:function_name}($3)
+{
+	${VISUAL}$0
+}
+endsnippet
+
+snippet ushort "unsigned short"
+unsigned short
+endsnippet
+
+snippet uint "unsigned int"
+unsigned int
+endsnippet
+
+snippet vmain "main() (main)" bA
+#include "stdio.h"
+#include "stdlib.h"
+
+
+int main()
+{
+	${VISUAL}$0
+	return 0;
+}
+endsnippet
