@@ -576,10 +576,18 @@ snippet "(?<=\S)\s{2,}" "remove double spaces" iwrA
  
 endsnippet
 
+context "not math()"
 snippet flalign "flalign env" w
 \begin{flalign*}
 $1
 \end{flalign*}
+$0
+endsnippet
+context "not math()"
+snippet definition "definition env" w
+\begin{definition}[$1]
+$2
+\end{definition}
 $0
 endsnippet
 
