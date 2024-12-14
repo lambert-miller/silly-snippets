@@ -213,16 +213,6 @@ snippet template(basic) "Basic template" b
 \usepackage{bm}
 \usepackage{longdivision}
 \usepackage{polynom}
-\usepackage{import}
-\usepackage{xifthen}
-\usepackage{pdfpages}
-\usepackage{transparent}
-\usepackage{xcolor}
-\newcommand{\incfig}[1]{%
-\def\svgwidth{\columnwidth}
-\import{./figures/}{#1.pdf_tex}
-}
-%inkscape-figures watch.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -606,13 +596,6 @@ snippet theorem "theorem env" w
 \begin{theorem}[$1]
 $2
 \end{theorem}
-$0
-endsnippet
-context "not math()"
-snippet corollary "corollary env" w
-\begin{corollary}[$1]
-$2
-\end{corollary}
 $0
 endsnippet
 
