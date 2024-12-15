@@ -543,3 +543,47 @@ snippet "(?<=\S)\s{2,}" "remove double spaces" iwrA
 endsnippet
 
 # vim: ts=2 sw=2 noet:list:ft=snippets:
+
+snippet ss1 "Section" bA
+\section{${1:${VISUAL:section name}}}%
+\label{sec:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+endsnippet
+
+
+snippet ss2 "Subsection" bA
+\subsection{${1:${VISUAL:subsection name}}}%
+\label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+endsnippet
+
+snippet ss3 "Subsubsection" bA
+\subsubsection{${1:${VISUAL:subsubsection name}}}%
+\label{ssub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+endsnippet
+
+snippet flalign "flalign environment" b
+\begin {flalign*}
+	$1
+\end {flalign*}
+$0
+endsnippet
+
+snippet btab "Table environment" bA
+\begin{table}[${1:htpb}]
+	\centering
+	\caption{${2:caption}}
+	\label{tab:${3:label}}
+	\begin{${4:t}${4/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}{${5:c}}
+	\toprule
+	$0${5/(?<=.)(c|l|r)|./(?1: & )/g}
+	\midrule
+	\bottomrule
+	\end{$4${4/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}
+\end{table}
+endsnippet
+
